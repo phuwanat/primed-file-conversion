@@ -117,7 +117,8 @@ task strand_flip {
         plink --vcf ~{vcf_file} --double-id \
             --extract flip.txt --flip flip.txt \
             --output-chr $chr_prefix \
-            --recode vcf-iid bgz --out ~{out_prefix}_flipped
+            --recode vcf-iid bgz --out ~{out_prefix}_flipped \
+            --memory 8000
     >>>
 
     output {
@@ -126,6 +127,7 @@ task strand_flip {
 
     runtime {
         docker: "quay.io/biocontainers/plink:1.90b6.21--hec16e2b_2"
+        memory: "10GB"
     }
 }
 

@@ -56,7 +56,7 @@ task vcf2pgen {
     }
 
     runtime {
-        docker: "quay.io/biocontainers/plink2:2.00a5.10--h4ac6f70_0"
+        docker: "pgscatalog/plink2:2.00a5.10--7eb8525fab7d"
         disks: "local-disk " + disk_size + " SSD"
         memory: mem_gb + " GB"
     }

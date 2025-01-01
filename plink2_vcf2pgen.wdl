@@ -56,7 +56,7 @@ task vcf2pgen {
     }
 
     runtime {
-        docker: "pgscatalog/plink2:2.00a5.10-7eb8525fab7d"
+        docker: "pgscatalog/plink2@sha256:1a18d7252cd8602255d179ce3c7a58eecac93908fa385a70d9db4f9beacbf717"
         disks: "local-disk " + disk_size + " SSD"
         memory: mem_gb + " GB"
     }

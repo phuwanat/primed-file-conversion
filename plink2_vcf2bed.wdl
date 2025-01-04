@@ -36,7 +36,7 @@ task vcf2bed {
 
     command {
         plink2 \
-            --vcf ${vcf_file} \
+            --vcf ${vcf_file} --vcf-half-call m\
             --make-bed \
             --out ${out_string}
         md5sum ${out_string}.bed | cut -d " " -f 1 > md5_bed.txt
